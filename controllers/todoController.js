@@ -48,5 +48,15 @@ module.exports = {
                 results: todo
             })
         }
+    },
+    updateTodo: (req, res) => {
+        const id = req.params.id;
+        const index = todoTasks.findIndex(todo => todo.id === Number(id));
+        todoTasks[index] = req.body;
+        res.status(200).json({
+            statusCode: 'success',
+            message: 'todo updated successfully',
+            results: todoTasks
+        })
     }
 }

@@ -9,7 +9,7 @@ router.get('/todoTasks', getAllTodos)
 router.get('/todoTasks/:id', singleTodo)
 router.post('/todoTasks', postATodo)
 router.delete('/todoTasks/:id', deleteTodo)
-router.put('todoTasks/:id', updateTodo)
+router.patch('todoTasks/:id', updateTodo)
 
 module.exports = {
     router
